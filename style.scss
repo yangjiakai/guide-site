@@ -1,0 +1,16 @@
+html,
+body {
+  min-height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-center: space-around;
+  algin-ite: center;
+}
+
+footer {
+  text-align: center;
+  height: 3rem;
+}

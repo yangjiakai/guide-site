@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <!-- <link rel="stylesheet" href="./style.scss">
+     -->
+    <style>
+      html,
+      body {
+        min-height: 100%;
+        font-size: 62.5%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 14px !important;
+        color: #606060;
+      }
+
+      ul,
+      li {
+        list-style-type: none;
+      }
+
+      main {
+        min-height: 100%;
+        padding: 1.6rem;
+      }
+
+      header .headerTitle {
+        margin: 0;
+        padding: 2rem;
+        background-color: #f7f7f7;
+        font-size: 0.8rem;
+        color: #606060;
+        font-weight: 700;
+      }
+
+      header {
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+          rgba(17, 17, 26, 0.1) 0px 0px 8px;
+      }
+
+      header,
+      footer {
+        text-align: center;
+      }
+
+      .copyright {
+        margin: 0;
+        padding: 2rem;
+        background-color: #f7f7f7;
+        font-size: 1rem !important;
+        color: #606060;
+      }
+
+      h4 {
+        margin: 2rem 1rem !important;
+      }
+
+      .mainTitle {
+        font-size: 2rem;
+        margin: 3rem 0;
+        font-weight: 700;
+      }
+
+      .mainTitle__icon {
+        margin-right: 1rem;
+        font-size: 3rem;
+      }
+
+      .subTitle {
+        font-size: 1.6rem;
+        margin: 1.6rem 0;
+        padding: 0 0.5rem;
+        border-left: 5px solid #3599cb;
+        font-weight: 700;
+      }
+
+      /* relative */
+      .relative__title {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+        margin: 2rem 0 1rem 0;
+        border-left: 5px solid #3599cb;
+        color: #888888;
+      }
+
+      .relative__item {
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .relativeItem__button {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      .relativeItem__icon {
+        color: #3599cb;
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+      }
+
+      .relativeItem__text {
+        color: #3599cb;
+      }
+
+      /* category */
+
+      .category__title {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+        margin: 2rem 0 1rem 0;
+        border-left: 5px solid #3599cb;
+        color: #888888;
+      }
+
+      .category__item {
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .categoryItem__button {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      .categoryItem__icon {
+        color: #606060;
+        margin-right: 0.5rem;
+      }
+
+      .categoryItem__text {
+        color: #606060;
+        font-weight: 700;
+      }
+
+      .categorySubItem__button {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+      }
+
+      .categorySubItem__icon {
+        color: #606060;
+        margin-right: 0.5rem;
+      }
+
+      .categorySubItem__text {
+        color: #3599cb;
+      }
+
+      img {
+        width: 100%;
+
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+          rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      }
+
+      .image__container {
+        text-align: center;
+      }
+
+      .vertical-img {
+        width: 70%;
+        margin: 0 auto !important;
+      }
+
+      .icon__down {
+        font-size: 4rem;
+        text-align: center;
+      }
+
+      .backToTop {
+        position: fixed;
+        right: 3rem;
+        bottom: 4rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 100%;
+        transition: opacity 0.5s;
+      }
+
+      .backToTop__icon {
+        font-size: 3rem;
+      }
+
+      .hidden {
+        opacity: 0%;
+      }
+
+      .helpful__container {
+        margin: 0 auto;
+        margin: 8rem;
+      }
+
+      .helpful__buttons {
+        display: flex;
+        justify-content: center;
+      }
+
+      .helpful__buttons,
+      .helpful__text {
+        text-align: center;
+      }
+
+      .helpful__buttons button {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        flex: 1;
+      }
+
+      .helpful__buttons button:first-child {
+        margin-right: 1rem;
+      }
+    </style>
+  </head>
+  <body class="app">
+    <header>
+      <h1 class="headerTitle">ユーザーズガイド</h1>
+    </header>
+    <main>
+      <!-- <img src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-down-arrows-kmg-design-flat-kmg-design.png"/> -->
+      <h1 class="mainTitle">
+        <span
+          class="iconify mainTitle__icon"
+          data-icon="flat-color-icons:about"
+        ></span
+        >スマホ内の画像を背景にする
+      </h1>
+
+      <div class="image__container">
+        <img src="./images/p1.png" alt="" />
+      </div>
+      <div class="icon__down">
+        <span class="iconify" data-icon="flat-color-icons:expand"></span>
+      </div>
+
+      <h2 class="subTitle">できること</h2>
+      <p>アプリの背景をお好みな写真や画像に変更できます</p>
+      <p>もっとあなた好みにカスタマイズしてきましょ</p>
+      <hr />
+
+      <h2 class="subTitle">設定方法</h2>
+      <p>
+        A1-15画面の背景に任意の写真や画像を以下の方法により設定することができます
+      </p>
+      <p>(1)ホーム画面の設定アイコンをタップし、[スクリーン]をタップします</p>
+
+      <div class="image__container">
+        <img src="./images/p2.png" alt="" />
+      </div>
+      <div class="icon__down">
+        <span class="iconify" data-icon="flat-color-icons:expand"></span>
+      </div>
+      <div class="image__container">
+        <img class="vertical-img" src="./images/p3.png" alt="" />
+      </div>
+      <div class="icon__down">
+        <span class="iconify" data-icon="flat-color-icons:expand"></span>
+      </div>
+      <div class="image__container">
+        <img class="vertical-img" src="./images/p4.png" alt="" />
+      </div>
+      <div class="icon__down">
+        <span class="iconify" data-icon="flat-color-icons:expand"></span>
+      </div>
+      <div class="image__container">
+        <img src="./images/p5.png" alt="" />
+      </div>
+      <div class="icon__down">
+        <span class="iconify" data-icon="flat-color-icons:expand"></span>
+      </div>
+      <div class="image__container">
+        <img src="./images/p6.png" alt="" />
+      </div>
+      <div class="icon__down">
+        <span class="iconify" data-icon="flat-color-icons:expand"></span>
+      </div>
+      <div class="image__container">
+        <img src="./images/p7.png" alt="" />
+      </div>
+      <div class="helpful__container">
+        <p class="helpful__text">この情報は役に立ちますか</p>
+        <div class="helpful__buttons">
+          <button type="button" class="btn btn-outline-secondary">はい</button
+          ><button type="button" class="btn btn-outline-secondary">
+            いいえ
+          </button>
+        </div>
+      </div>
+      <div class="relative">
+        <h2 class="relative__title">関連項目</h2>
+        <ul class="relative__list">
+          <li class="relative__item">
+            <a href="#" class="relativeItem__button">
+              <span
+                class="iconify relativeItem__icon"
+                data-icon="gala:file-doc"
+              ></span>
+              <span class="relativeItem__text">カスタムキーを変える</span>
+            </a>
+          </li>
+          <li class="relative__item">
+            <a href="#" class="relativeItem__button">
+              <span
+                class="iconify relativeItem__icon"
+                data-icon="gala:file-doc"
+              ></span>
+              <span class="relativeItem__text"
+                >ウィジェットの位置や表示を変える</span
+              >
+            </a>
+          </li>
+          <li class="relative__item">
+            <a href="#" class="relativeItem__button">
+              <span
+                class="iconify relativeItem__icon"
+                data-icon="gala:file-doc"
+              ></span>
+              <span class="relativeItem__text"
+                >ホーム画面のモードを切り替える</span
+              >
+            </a>
+          </li>
+          <li class="relative__item">
+            <a href="#" class="relativeItem__button">
+              <span
+                class="iconify relativeItem__icon"
+                data-icon="gala:file-doc"
+              ></span>
+              <span class="relativeItem__text"
+                >アプリの背景と本体機器のイルミを変える</span
+              >
+            </a>
+          </li>
+          <li class="relative__item">
+            <a href="#" class="relativeItem__button">
+              <span
+                class="iconify relativeItem__icon"
+                data-icon="gala:file-doc"
+              ></span>
+              <span class="relativeItem__text">FAQ:写真が表示されない</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="category">
+        <h2 class="category__title">カテゴリー</h2>
+        <ul class="category__list">
+          <li class="category__item">
+            <a
+              class="categoryItem__button"
+              data-bs-toggle="collapse"
+              href="#categoryItem1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="categoryItem1"
+            >
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">初期設定</span>
+            </a>
+            <ul class="subCategory collapse" id="categoryItem1">
+              <li class="subCategory__item">
+                <a class="categorySubItem__button">
+                  <span
+                    class="iconify categorySubItem__icon"
+                    data-icon="emojione:diamond-with-a-dot"
+                  ></span>
+                  <span class="categorySubItem__text">画面設定</span>
+                </a>
+              </li>
+
+              <li class="subCategory__item">
+                <a class="categorySubItem__button">
+                  <span
+                    class="iconify categorySubItem__icon"
+                    data-icon="emojione:diamond-with-a-dot"
+                  ></span>
+                  <span class="categorySubItem__text">音設定</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="category__item">
+            <a
+              class="categoryItem__button"
+              data-bs-toggle="collapse"
+              href="#categoryItem2"
+              role="button"
+              aria-expanded="false"
+              aria-controls="categoryItem2"
+            >
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">AVソースを楽しむ</span>
+            </a>
+            <ul class="subCategory collapse" id="categoryItem2">
+              <li class="subCategory__item">
+                <a class="categorySubItem__button">
+                  <span
+                    class="iconify categorySubItem__icon"
+                    data-icon="emojione:diamond-with-a-dot"
+                  ></span>
+                  <span class="categorySubItem__text">画面設定</span>
+                </a>
+              </li>
+
+              <li class="subCategory__item">
+                <a class="categorySubItem__button">
+                  <span
+                    class="iconify categorySubItem__icon"
+                    data-icon="emojione:diamond-with-a-dot"
+                  ></span>
+                  <span class="categorySubItem__text">音設定</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">音をカスタマイズする</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">見た目をカスタマイズする</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">ナビを使う</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">電話をする</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">メッセージを聞く</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">音認識/alexaを使う</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">カーセーフティを使う</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">OBD II機能を接続する</span>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text"
+                >システム設定&アプリ設定を変更する</span
+              >
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="categoryItem__button" href="#">
+              <span
+                class="iconify categoryItem__icon"
+                data-icon="akar-icons:chevron-right"
+              ></span>
+              <span class="categoryItem__text">FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p class="copyright">CopyRight 2022 YDesign All Right Reserved</p>
+    </footer>
+    <div class="backToTop">
+      <span
+        class="iconify-inline backToTop__icon"
+        data-icon="emojione:top-arrow"
+      ></span>
+    </div>
+  </body>
+</html>
+
+<script>
+  const showOnPx = 100;
+  const backToTopButton = document.querySelector(".backToTop");
+
+  const scrollContainer = () => {
+    return document.documentElement || document.body;
+  };
+
+  const goToTop = () => {
+    document.body.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  document.addEventListener("scroll", () => {
+    if (scrollContainer().scrollTop > showOnPx) {
+      backToTopButton.classList.remove("hidden");
+    } else {
+      backToTopButton.classList.add("hidden");
+    }
+  });
+
+  backToTopButton.addEventListener("click", goToTop);
+</script>
