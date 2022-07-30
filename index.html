@@ -56,10 +56,17 @@
       header .headerTitle {
         margin: 0;
         padding: 2rem;
-        background-color: #f7f7f7;
-        font-size: 0.8rem;
+
+        font-size: 2rem;
         color: #606060;
         font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .headerTitle__icon {
+        cursor: pointer;
       }
 
       header {
@@ -247,6 +254,7 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         flex: 1;
+        font-size: 1.2rem;
       }
 
       .helpful__buttons button:first-child {
@@ -256,7 +264,15 @@
   </head>
   <body class="app">
     <header>
-      <h1 class="headerTitle">ユーザーズガイド</h1>
+      <h1 class="headerTitle">
+        <span
+          class="iconify headerTitle__icon"
+          data-icon="akar-icons:chevron-left"
+        ></span>
+        <span class="headerTitle__text">ユーザーズガイド</span>
+
+        <span class="iconify headerTitle__icon" data-icon="bi:list"></span>
+      </h1>
     </header>
     <main>
       <!-- <img src="https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-down-arrows-kmg-design-flat-kmg-design.png"/> -->
